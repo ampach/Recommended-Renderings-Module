@@ -4,7 +4,6 @@ using Sitecore.Data.Templates;
 using Sitecore.Diagnostics;
 using Sitecore.Globalization;
 using Sitecore.Layouts;
-using Sitecore.Pipelines.RenderDeviceEditorRendering;
 using Sitecore.Resources;
 using Sitecore.Rules;
 using Sitecore.SecurityModel;
@@ -745,7 +744,12 @@ namespace RecommendedRenderings.Controls
                             htmlGenericControl1.Controls.Add((System.Web.UI.Control)htmlGenericControl2);
                         }
                     }
-                    RenderDeviceEditorRenderingPipeline.Run(rendering, control, (System.Web.UI.Control)htmlGenericControl1);
+
+
+#if (!SC72 && !SC75 && !SC80)
+    Sitecore.Pipelines.RenderDeviceEditorRendering.RenderDeviceEditorRenderingPipeline.Run(rendering, control, (System.Web.UI.Control)htmlGenericControl1);    
+#endif
+
                     ++index;
                 }
             }

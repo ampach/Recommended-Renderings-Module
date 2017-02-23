@@ -46,14 +46,38 @@
     <Reference Include="Sitecore.Client">
       <HintPath>..\Dependencies\Sitecore.Client.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.ContentSearch">
-      <HintPath>..\Dependencies\Sitecore.ContentSearch.dll</HintPath>
+    <Reference Include="Sitecore.ContentSearch" Condition="'$(Configuration)'=='Release 72'">
+      <HintPath>..\Dependencies\SC72\Sitecore.ContentSearch.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.ContentSearch" Condition="'$(Configuration)'=='Release 75'">
+      <HintPath>..\Dependencies\SC75\Sitecore.ContentSearch.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.ContentSearch" Condition="'$(Configuration)'=='Release 80'">
+      <HintPath>..\Dependencies\SC80\Sitecore.ContentSearch.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.ContentSearch" Condition="'$(Configuration)'=='Release 81'">
+      <HintPath>..\Dependencies\SC81\Sitecore.ContentSearch.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.ContentSearch" Condition="'$(Configuration)'=='Release 82'">
+      <HintPath>..\Dependencies\SC82\Sitecore.ContentSearch.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.ContentSearch.Client">
       <HintPath>..\Dependencies\Sitecore.ContentSearch.Client.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.ContentSearch.Linq">
-      <HintPath>..\Dependencies\Sitecore.ContentSearch.Linq.dll</HintPath>
+    <Reference Include="Sitecore.ContentSearch.Linq" Condition="'$(Configuration)'=='Release 72'">
+      <HintPath>..\Dependencies\SC72\Sitecore.ContentSearch.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.ContentSearch.Linq" Condition="'$(Configuration)'=='Release 75'">
+      <HintPath>..\Dependencies\SC75\Sitecore.ContentSearch.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.ContentSearch.Linq" Condition="'$(Configuration)'=='Release 80'">
+      <HintPath>..\Dependencies\SC80\Sitecore.ContentSearch.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.ContentSearch.Linq" Condition="'$(Configuration)'=='Release 81'">
+      <HintPath>..\Dependencies\SC81\Sitecore.ContentSearch.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.ContentSearch.Linq" Condition="'$(Configuration)'=='Release 82'">
+      <HintPath>..\Dependencies\SC82\Sitecore.ContentSearch.Linq.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.ContentSearch.Linq.Lucene">
       <HintPath>..\Dependencies\Sitecore.ContentSearch.Linq.Lucene.dll</HintPath>
@@ -64,8 +88,20 @@
     <Reference Include="Sitecore.ExperienceEditor">
       <HintPath>..\Dependencies\Sitecore.ExperienceEditor.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Kernel">
-      <HintPath>..\Dependencies\Sitecore.Kernel.dll</HintPath>
+    <Reference Include="Sitecore.Kernel" Condition="'$(Configuration)'=='Release 72'">
+      <HintPath>..\Dependencies\SC72\Sitecore.Kernel.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Kernel" Condition="'$(Configuration)'=='Release 75'">
+      <HintPath>..\Dependencies\SC75\Sitecore.Kernel.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Kernel" Condition="'$(Configuration)'=='Release 80'">
+      <HintPath>..\Dependencies\SC80\Sitecore.Kernel.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Kernel" Condition="'$(Configuration)'=='Release 81'">
+      <HintPath>..\Dependencies\SC81\Sitecore.Kernel.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Kernel" Condition="'$(Configuration)'=='Release 82'">
+      <HintPath>..\Dependencies\SC82\Sitecore.Kernel.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Logging">
       <HintPath>..\Dependencies\Sitecore.Logging.dll</HintPath>
@@ -180,6 +216,7 @@
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
+	<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release 80|AnyCPU'">
@@ -189,6 +226,7 @@
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
+	<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release 81|AnyCPU'">
@@ -198,15 +236,27 @@
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
+	<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release 75|AnyCPU'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release 82|AnyCPU'">
     <OutputPath>bin\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <DefineConstants>TRACE;SC82</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
+	<TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release 75|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;SC75</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+	<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
