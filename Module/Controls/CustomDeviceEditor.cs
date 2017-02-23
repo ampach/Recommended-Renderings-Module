@@ -24,7 +24,6 @@ using System.Web.UI.HtmlControls;
 using System.Xml.Linq;
 using Sitecore;
 using Sitecore.Shell.Applications.Layouts.DeviceEditor;
-using Sitecore.Xdb.Configuration;
 
 namespace RecommendedRenderings.Controls
 {
@@ -403,7 +402,12 @@ namespace RecommendedRenderings.Controls
             if (device.Layout != null)
                 this.Layout.Value = device.Layout;
             this.Personalize.Visible = Policy.IsAllowed("Page Editor/Extended features/Personalization");
-            this.Test.Visible = XdbSettings.Enabled && Policy.IsAllowed("Page Editor/Extended features/Testing");
+#if (!SC72 && !SC75 && !SC80)
+    this.Test.Visible = Sitecore.Xdb.Configuration.XdbSettings.Enabled && Policy.IsAllowed("Page Editor/Extended features/Testing");    
+#else
+            this.Test.Visible = Policy.IsAllowed("Page Editor/Extended features/Testing");
+#endif
+
             this.Refresh();
             this.SelectedIndex = -1;
         }

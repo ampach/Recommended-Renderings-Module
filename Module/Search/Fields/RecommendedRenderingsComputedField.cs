@@ -42,8 +42,6 @@ namespace RecommendedRenderings.Search.Fields
                 var result = new List<RecommendedRenderingModel>();
 
                 ProcessLayoutDefinition(result, item);
-                //ProcessRelatedItems(result, item);
-                //ProcessPlaceholderSettings(result, result.GroupBy(q => q.Placeholder).Select(q => q.Key).ToList(), item.Database);
 
                 if (!result.Any())
                     return null;
@@ -63,7 +61,13 @@ namespace RecommendedRenderings.Search.Fields
         {
             using (new SecurityStateSwitcher(SecurityState.Disabled))
             {
+
+#if (SC72 || SC75)
+                Sitecore.Data.Fields.LayoutField layoutField = item.Fields["__Renderings"];
+#else
                 Sitecore.Data.Fields.LayoutField layoutField = item.Fields["__Final Renderings"];
+#endif
+
                 if (layoutField == null) return;
 
                 // Get all devices

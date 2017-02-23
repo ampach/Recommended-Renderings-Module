@@ -25,8 +25,13 @@ Sitecore.RecommendedRenderingTreeview.onTreeClick = function (element, evt, clic
 Sitecore.RecommendedRenderingTreeview.onTreeGlyphClick = function (node, treeElement, id) {
   var glyph = node.down();
 
-  if (glyph.src.indexOf("treemenu_collapsed.png") >= 0 && glyph.src.indexOf("notreemenu_collapsed.png.gif") == -1) {
-      Sitecore.Treeview.setGlyph(glyph, "/sc-spinner16.gif");
+  if ((glyph.src.indexOf("treemenu_collapsed.png") >= 0 || glyph.src.indexOf("expand15x15") >= 0) && (glyph.src.indexOf("notreemenu_collapsed.png.gif") == -1 || glyph.src.indexOf("noexpand15x15") == -1)) {
+
+      if (glyph.src.indexOf("expand15x15") >= 0) {
+          Sitecore.Treeview.setGlyph(glyph, "/loading15x15");
+      } else {
+          Sitecore.Treeview.setGlyph(glyph, "/sc-spinner16.gif");
+      }
 
     var content = $F(treeElement.id + "_Database");
 
@@ -69,7 +74,7 @@ Sitecore.RecommendedRenderingTreeview.onTreeGlyphClick = function (node, treeEle
         onFailure: function (request) { alert("Failed"); }
     });
   } 
-  else if (glyph.src.indexOf("treemenu_expanded.png") > 0) {
+  else if (glyph.src.indexOf("treemenu_expanded.png") > 0 || glyph.src.indexOf("collapse15x15") > 0) {
       Sitecore.Treeview.collapseTreeNode(node);
   }
 

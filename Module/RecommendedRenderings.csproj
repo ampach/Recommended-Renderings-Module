@@ -115,7 +115,8 @@
     <Reference Include="Sitecore.Web">
       <HintPath>..\Dependencies\Sitecore.Web.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Xdb.Configuration">
+    <Reference Include="Sitecore.Xdb.Configuration, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Dependencies\Sitecore.Xdb.Configuration.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -192,6 +193,10 @@
       <DependentUpon>Z.RecommendedRenderings.ContentSearch.Index.config</DependentUpon>
       <IsTransformFile>True</IsTransformFile>
     </None>
+    <None Include="App_Config\Include\RecommendedRenderings\Z.RecommendedRenderings.ContentSearch.Index.Release 75.config">
+      <DependentUpon>Z.RecommendedRenderings.ContentSearch.Index.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
     <None Include="App_Config\Include\RecommendedRenderings\Z.RecommendedRenderings.ContentSearch.Index.Release 80.config">
       <DependentUpon>Z.RecommendedRenderings.ContentSearch.Index.config</DependentUpon>
       <IsTransformFile>True</IsTransformFile>
@@ -201,6 +206,7 @@
       <IsTransformFile>True</IsTransformFile>
     </None>
     <None Include="Properties\PublishProfiles\Release 72.pubxml" />
+    <None Include="Properties\PublishProfiles\Release 75.pubxml" />
     <None Include="Properties\PublishProfiles\Release 80.pubxml" />
     <None Include="Properties\PublishProfiles\Release 81.pubxml" />
     <None Include="Properties\PublishProfiles\Release 82.pubxml" />
@@ -216,7 +222,7 @@
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
-	<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release 80|AnyCPU'">
@@ -226,7 +232,7 @@
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
-	<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release 81|AnyCPU'">
@@ -236,7 +242,7 @@
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
-	<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release 82|AnyCPU'">
@@ -246,7 +252,7 @@
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
-	<TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release 75|AnyCPU'">
@@ -256,7 +262,7 @@
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
-	<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

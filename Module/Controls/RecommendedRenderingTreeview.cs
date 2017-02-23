@@ -109,7 +109,18 @@ namespace RecommendedRenderings.Controls
             imageBuilder.Src = !isExpanded ? "images/treemenu_collapsed.png" : "images/treemenu_expanded.png";
             output.Write((string) imageBuilder.ToString());
         }
-      
+
+        private static void RenderRootGlyphSC7(HtmlTextWriter output, TreeviewRoot root, bool isExpanded)
+        {
+            Assert.ArgumentNotNull((object)output, "output");
+            ImageBuilder imageBuilder = new ImageBuilder()
+            {
+                Class = "scContentTreeNodeGlyph"
+            };
+            imageBuilder.Src = !isExpanded ? "images/expand15x15.gif" : "images/collapse15x15.gif";
+            output.Write(imageBuilder.ToString());
+        }
+
         private static void RenderTreeNodeIcon(HtmlTextWriter output, Item item)
         {
             Assert.ArgumentNotNull((object)output, "output");
@@ -259,7 +270,13 @@ namespace RecommendedRenderings.Controls
             output.Write("<div id=\"");
             output.Write(root.Value);
             output.Write("\" class=\"scContentTreeNode\">");
-            RecommendedRenderingTreeview.RenderRootGlyph(output, root, isExpanded);
+#if (SC72 || SC75)
+            RecommendedRenderingTreeview.RenderRootGlyphSC7(output, root, isExpanded);
+#else
+               RecommendedRenderingTreeview.RenderRootGlyph(output, root, isExpanded);
+#endif
+
+
             string str = "scContentTreeNodeNormal";
             output.Write("<a href=\"#\" class=\"" + str + "\"");
             output.Write(">");
