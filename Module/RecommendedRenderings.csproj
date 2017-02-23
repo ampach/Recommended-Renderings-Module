@@ -92,15 +92,11 @@
   <ItemGroup>
     <Content Include="App_Config\Include\RecommendedRenderings\Z.RecommendedRenderings.ContentSearch.Index.config">
       <SubType>Designer</SubType>
+      <TransformOnBuild>true</TransformOnBuild>
     </Content>
     <Content Include="App_Config\Include\RecommendedRenderings\Z.RecommendedRenderings.ContentSearch.Configuration.config">
       <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Config\Include\RecommendedRenderings\RecommendedRenderings.Extra.config">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Config\Include\RecommendedRenderings\Z.RecommendedRenderings.ContentSearch.Index.SC82.config.disabled">
-      <SubType>Designer</SubType>
+      <TransformOnBuild>true</TransformOnBuild>
     </Content>
   </ItemGroup>
   <ItemGroup>
@@ -134,14 +130,84 @@
   <ItemGroup>
     <Content Include="App_Config\Include\RecommendedRenderings\RecommendedRenderings.config">
       <SubType>Designer</SubType>
+      <TransformOnBuild>true</TransformOnBuild>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Properties\PublishProfiles\" />
+    <None Include="App_Config\Include\RecommendedRenderings\RecommendedRenderings.Release 82.config">
+      <DependentUpon>RecommendedRenderings.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="App_Config\Include\RecommendedRenderings\Z.RecommendedRenderings.ContentSearch.Configuration.Release 72.config">
+      <DependentUpon>Z.RecommendedRenderings.ContentSearch.Configuration.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="App_Config\Include\RecommendedRenderings\Z.RecommendedRenderings.ContentSearch.Configuration.Release 75.config">
+      <DependentUpon>Z.RecommendedRenderings.ContentSearch.Configuration.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="App_Config\Include\RecommendedRenderings\Z.RecommendedRenderings.ContentSearch.Configuration.Release 80.config">
+      <DependentUpon>Z.RecommendedRenderings.ContentSearch.Configuration.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <Content Include="packages.config" />
+    <None Include="App_Config\Include\RecommendedRenderings\Z.RecommendedRenderings.ContentSearch.Index.Release 72.config">
+      <DependentUpon>Z.RecommendedRenderings.ContentSearch.Index.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="App_Config\Include\RecommendedRenderings\Z.RecommendedRenderings.ContentSearch.Index.Release 80.config">
+      <DependentUpon>Z.RecommendedRenderings.ContentSearch.Index.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="App_Config\Include\RecommendedRenderings\Z.RecommendedRenderings.ContentSearch.Index.Release 82.config">
+      <DependentUpon>Z.RecommendedRenderings.ContentSearch.Index.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="Properties\PublishProfiles\Release 72.pubxml" />
+    <None Include="Properties\PublishProfiles\Release 80.pubxml" />
+    <None Include="Properties\PublishProfiles\Release 81.pubxml" />
+    <None Include="Properties\PublishProfiles\Release 82.pubxml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release 72|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;SC72</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release 80|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;SC80</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release 81|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;SC81</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release 75|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
@@ -170,7 +236,9 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\VStudio\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\VStudio\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
     <Error Condition="!Exists('..\VStudio\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\VStudio\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\VStudio\packages\SlowCheetah.2.5.48\build\SlowCheetah.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\VStudio\packages\SlowCheetah.2.5.48\build\SlowCheetah.targets'))" />
   </Target>
+  <Import Project="..\VStudio\packages\SlowCheetah.2.5.48\build\SlowCheetah.targets" Condition="Exists('..\VStudio\packages\SlowCheetah.2.5.48\build\SlowCheetah.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

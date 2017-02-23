@@ -8,11 +8,26 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Release 72|Any CPU = Release 72|Any CPU
+		Release 75|Any CPU = Release 75|Any CPU
+		Release 80|Any CPU = Release 80|Any CPU
+		Release 81|Any CPU = Release 81|Any CPU
+		Release 82|Any CPU = Release 82|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{C3416729-41D4-421E-96DC-B86A95646B66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C3416729-41D4-421E-96DC-B86A95646B66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3416729-41D4-421E-96DC-B86A95646B66}.Release 72|Any CPU.ActiveCfg = Release 72|Any CPU
+		{C3416729-41D4-421E-96DC-B86A95646B66}.Release 72|Any CPU.Build.0 = Release 72|Any CPU
+		{C3416729-41D4-421E-96DC-B86A95646B66}.Release 75|Any CPU.ActiveCfg = Release 75|Any CPU
+		{C3416729-41D4-421E-96DC-B86A95646B66}.Release 75|Any CPU.Build.0 = Release 75|Any CPU
+		{C3416729-41D4-421E-96DC-B86A95646B66}.Release 80|Any CPU.ActiveCfg = Release 80|Any CPU
+		{C3416729-41D4-421E-96DC-B86A95646B66}.Release 80|Any CPU.Build.0 = Release 80|Any CPU
+		{C3416729-41D4-421E-96DC-B86A95646B66}.Release 81|Any CPU.ActiveCfg = Release 81|Any CPU
+		{C3416729-41D4-421E-96DC-B86A95646B66}.Release 81|Any CPU.Build.0 = Release 81|Any CPU
+		{C3416729-41D4-421E-96DC-B86A95646B66}.Release 82|Any CPU.ActiveCfg = Release 81|Any CPU
+		{C3416729-41D4-421E-96DC-B86A95646B66}.Release 82|Any CPU.Build.0 = Release 81|Any CPU
 		{C3416729-41D4-421E-96DC-B86A95646B66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3416729-41D4-421E-96DC-B86A95646B66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
