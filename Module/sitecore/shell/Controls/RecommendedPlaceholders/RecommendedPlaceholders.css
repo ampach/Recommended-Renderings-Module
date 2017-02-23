@@ -1,0 +1,71 @@
+﻿.hidden-block {
+    display: none;
+}
+
+.close-button:before {
+    content: 'x';
+    color: #fff;
+    font-size: 1.4em;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    position: absolute;
+    right: 6px;
+    top: 0;
+}
+
+.close-button {
+    text-align: left;
+    padding: 5px;
+    background-color: #289bc8;
+    color: #fff;
+}
+
+.close-button:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.extended-placeholder-container {
+    position: relative;
+}
+
+.extended-placeholder-container .Recommended-placeholders {
+    position: absolute;
+    /*display: block;*/
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    border: 1px solid;
+    /*padding: 2px 6px 10px 10px;*/
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    border-radius: 5px;
+
+    border-color: #66afe9;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+.extended-placeholder-container .Recommended-placeholders:after{    
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 100%;
+    border: 10px solid transparent;
+    border-top: 10px solid #66afe9;
+}
+
+.extended-placeholder-container .rpContainer {
+    display: block !important;
+}
+
+.extended-placeholder-container .rpContainer .rplItem {
+    padding: 5px 5px 5px 5px;
+    font-size: 1.0em;
+    cursor: pointer;
+}
+
+.extended-placeholder-container .rpContainer .rplItem:last-child {
+    padding-bottom: 5px;
+}
