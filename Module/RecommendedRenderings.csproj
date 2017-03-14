@@ -138,6 +138,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration\Settings.cs" />
+    <Compile Include="PostSteps\PackagePostStep.cs" />
     <Compile Include="RecommendedRenderingsContext.cs" />
     <Compile Include="Controls\CustomDeviceEditor.cs" />
     <Compile Include="Controls\CustomSelectRendering.cs" />
