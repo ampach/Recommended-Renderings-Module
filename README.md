@@ -27,7 +27,7 @@ Default: Applications/16x16/windows.png
 
 ## Installation
 
-**WARNING:**  The module will override the Sitecore’s default SelectRendering and EditDevice dialogs. You always will be able to restore them if needed (see the [Uninstall](#Uninstall) section). BUT make sure that you haven’t already overridden this dialogs on your environment. if it is, It is not recommended to install the module. Please [contact me](mailto:apr.dev@gmail.com) in this case and we will solve it individually. 
+**WARNING:**  The module will override the Sitecore’s default SelectRendering and EditDevice dialogs. You always will be able to restore them if needed (see the [Uninstall](#uninstall) section). BUT make sure that you haven’t already overridden this dialogs on your environment. if it is, It is not recommended to install the module. Please [contact me](mailto:apr.dev@gmail.com) in this case and we will solve it individually. 
 
 Follow the steps below for installing module:
 - Make sure that you downloaded the correct version of the module.
