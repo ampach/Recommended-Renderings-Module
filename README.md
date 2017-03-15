@@ -22,12 +22,12 @@ Default value: /sitecore/layout/Placeholder Settings
    * *TreeviewRootIcon* - Default icon for root element of the recommended renderings list.
 Default: Applications/16x16/windows.png
 
-* **Z.RecommendedRenderings.ContentSearch.Configuration.config** - defines a search index configuration. It’s different for each of versions of Sitecore and should not be changed.
-* **Z.RecommendedRenderings.ContentSearch.Index.config** - defines a search index. It’s also different for each of versions of Sitecore. The Crowling locations should be the same with pathes that defined in the ContentRootPath and PlaceholderSettingsRootPath settings of RecommendedRenderings.config
+* **Z.RecommendedRenderings.ContentSearch.Configuration.config** - defines a search index configuration. Itâ€™s different for each of versions of Sitecore and should not be changed.
+* **Z.RecommendedRenderings.ContentSearch.Index.config** - defines a search index. Itâ€™s also different for each of versions of Sitecore. The Crowling locations should be the same with pathes that defined in the ContentRootPath and PlaceholderSettingsRootPath settings of RecommendedRenderings.config
 
 ## Installation
 
-**WARNING:**  The module will override the Sitecore’s default SelectRendering and EditDevice dialogs. You always will be able to restore them if needed (see the [Uninstall](/#Uninstall) section). BUT make sure that you haven’t already overridden this dialogs on your environment. if it is, It is not recommended to install the module. Please [contact me](mailto:apr.dev@gmail.com) in this case and we will solve it individually. 
+**WARNING:**  The module will override the Sitecoreâ€™s default SelectRendering and EditDevice dialogs. You always will be able to restore them if needed (see the [Uninstall](#Uninstall) section). BUT make sure that you havenâ€™t already overridden this dialogs on your environment. if it is, It is not recommended to install the module. Please [contact me](mailto:apr.dev@gmail.com) in this case and we will solve it individually. 
 
 Follow the steps below for installing module:
 - Make sure that you downloaded the correct version of the module.
@@ -41,7 +41,7 @@ The install package has a post install step that should rebuild the index automa
 	recommended-renderings-index.
 
 ## Uninstall 
-If you don’t like the module or in some other reasons you want to uninstall the module, remove files by the following paths:
+If you donâ€™t like the module or in some other reasons you want to uninstall the module, remove files by the following paths:
 - sitecore\shell\Override\Applications\Dialogs\SelectRendering\SelectRendering.xml
 - sitecore\shell\Override\Applications\Layouts\DeviceEditor\DeviceEditor.xml
 - App_Config\Include\RecommendedRenderings
