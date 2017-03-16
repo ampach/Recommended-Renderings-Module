@@ -45,9 +45,11 @@
   <ItemGroup>
     <Reference Include="Sitecore.Client">
       <HintPath>..\Dependencies\Sitecore.Client.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Sitecore.ContentSearch" Condition="'$(Configuration)'=='Release 72'">
       <HintPath>..\Dependencies\SC72\Sitecore.ContentSearch.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Sitecore.ContentSearch" Condition="'$(Configuration)'=='Release 75'">
       <HintPath>..\Dependencies\SC75\Sitecore.ContentSearch.dll</HintPath>
@@ -63,9 +65,11 @@
     </Reference>
     <Reference Include="Sitecore.ContentSearch.Client">
       <HintPath>..\Dependencies\Sitecore.ContentSearch.Client.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Sitecore.ContentSearch.Linq" Condition="'$(Configuration)'=='Release 72'">
       <HintPath>..\Dependencies\SC72\Sitecore.ContentSearch.Linq.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Sitecore.ContentSearch.Linq" Condition="'$(Configuration)'=='Release 75'">
       <HintPath>..\Dependencies\SC75\Sitecore.ContentSearch.Linq.dll</HintPath>
@@ -81,15 +85,19 @@
     </Reference>
     <Reference Include="Sitecore.ContentSearch.Linq.Lucene">
       <HintPath>..\Dependencies\Sitecore.ContentSearch.Linq.Lucene.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Sitecore.ContentSearch.LuceneProvider">
       <HintPath>..\Dependencies\Sitecore.ContentSearch.LuceneProvider.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Sitecore.ExperienceEditor">
       <HintPath>..\Dependencies\Sitecore.ExperienceEditor.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Sitecore.Kernel" Condition="'$(Configuration)'=='Release 72'">
       <HintPath>..\Dependencies\SC72\Sitecore.Kernel.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Sitecore.Kernel" Condition="'$(Configuration)'=='Release 75'">
       <HintPath>..\Dependencies\SC75\Sitecore.Kernel.dll</HintPath>
@@ -105,19 +113,24 @@
     </Reference>
     <Reference Include="Sitecore.Logging">
       <HintPath>..\Dependencies\Sitecore.Logging.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Sitecore.Logging.Client">
       <HintPath>..\Dependencies\Sitecore.Logging.Client.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Sitecore.Speak.Client">
       <HintPath>..\Dependencies\Sitecore.Speak.Client.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Sitecore.Web">
       <HintPath>..\Dependencies\Sitecore.Web.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Sitecore.Xdb.Configuration, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Dependencies\Sitecore.Xdb.Configuration.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -189,7 +202,7 @@
       <DependentUpon>Z.RecommendedRenderings.ContentSearch.Configuration.config</DependentUpon>
       <IsTransformFile>True</IsTransformFile>
     </None>
-    <Content Include="packages.config" />
+    <None Include="packages.config" />
     <None Include="App_Config\Include\RecommendedRenderings\Z.RecommendedRenderings.ContentSearch.Index.Release 72.config">
       <DependentUpon>Z.RecommendedRenderings.ContentSearch.Index.config</DependentUpon>
       <IsTransformFile>True</IsTransformFile>

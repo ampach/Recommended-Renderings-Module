@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("RecommendedRenderings")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("https://github.com/ampach/Recommended-Renderings-Module")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Artsem Prashkovich")]
 [assembly: AssemblyProduct("RecommendedRenderings")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
