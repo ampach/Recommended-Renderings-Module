@@ -44,5 +44,7 @@ The install package has a post install step that should rebuild the index automa
 If you don’t like the module or in some other reasons you want to uninstall the module, remove files by the following paths:
 - sitecore\shell\Override\Applications\Dialogs\SelectRendering\SelectRendering.xml
 - sitecore\shell\Override\Applications\Layouts\DeviceEditor\DeviceEditor.xml
+- sitecore\shell\Controls\RecommendedPlaceholders
+- sitecore\shell\Controls\RecommendedRenderingTreeview
 - App_Config\Include\RecommendedRenderings
 - bin\RecommendedRenderings.dll
