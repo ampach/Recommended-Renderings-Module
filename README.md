@@ -1,6 +1,6 @@
 # Recommended Renderings Module
 
-## Read more my the link: [Blog post](http://www.brimit.com/blog/recommended-renderings-module)
+### Read more by the link: [Blog post](http://www.brimit.com/blog/recommended-renderings-module)
 
 ## What is it?
 
