@@ -1,11 +1,11 @@
 # Recommended Renderings Module
 
+## Read more my the link: [Blog post](http://www.brimit.com/blog/recommended-renderings-module)
+
 ## What is it?
 
 Recommended Rendering Module provides a list of recommended renderings that potentially can be used with current item and the collection of placeholder names where selected rendering can be added:
 [![N|Solid](http://www.brimit.com/~/media/images/Blog/recommendedPlaceholderList.png)](http://www.brimit.com/~/media/images/Blog/recommendedPlaceholderList.png)
-
-Read more my the link: [Blog post](http://www.brimit.com/blog/recommended-renderings-module)
 
 ## Configuration
 
